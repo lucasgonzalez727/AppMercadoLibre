@@ -1,0 +1,20 @@
+
+{{#unless categories}}
+    {{#unless errorMessage}}
+        <div class="icon ion-loading-c"></div>
+    {{/unless}}
+{{/unless}}
+
+{{#if errorMessage}}
+    <p class="errorMessage">{{errorMessage}}</p>
+{{/if}}
+
+
+<div class="items_breadcrumb">
+    <ul>
+        {{#each categories}}
+            <li>{{this.name}}</li>
+        {{/each}}
+    </ul>
+</div>
+<ul class="items_list"></ul>

@@ -1,0 +1,13 @@
+<div class="items_list_product_image">
+    <img src="{{thumbnail}}" alt="" />
+</div>
+<div class="items_list_product_details">
+    <div class="item_list_product_details_title">
+        <h2> {{priceFormatted}}</h2>
+        {{#if shippingImage}} 
+            <img src="{{shippingImage}}" alt="Envíos" />
+        {{/if}}
+        <span>{{address.state_name}}</span>
+    </div>
+    <p>{{title}}</p>
+</div>

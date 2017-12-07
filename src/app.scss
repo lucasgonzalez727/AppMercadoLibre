@@ -1,0 +1,21 @@
+@import "./assets/scss/reset.scss";
+@import "./assets/scss/ionicons.scss";
+@import "./application/views/HeaderContent/styles.scss";
+@import "./pages/ItemsListPage/styles.scss";
+@import "./pages/ItemDetailPage/styles.scss";
+@import "./components/ItemList/styles.scss";
+
+
+body {
+    background: $ExtraLightColor;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainContent {
+    padding: 0 10px;
+
+    @media screen and (min-width: $break-l) {
+        padding: 0px;
+    }
+}
+

@@ -1,0 +1,117 @@
+/*application/views/HeaderContent/styles.css*/
+
+@import "variables.scss";
+
+#header {
+    width: 100%;
+    background-color: $BackgroundHeaderColor;
+
+    .header_main {
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+        overflow: hidden;
+
+        @media screen and (min-width: $break-l) {
+            width: 980px;
+            padding: 10px 0;
+        }
+
+        .header_main_brand {
+            float: left;
+            width: 16%;
+            margin-right: 4%;
+            max-width: 56px;
+
+            @media screen and (min-width: $break-m) {
+                width: 8%;
+                margin-right: 2%;
+            }
+
+            @media screen and (min-width: $break-l) {
+                width: 56px;
+                margin-right: 20px;
+            }
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        .header_main_search {
+            float: left;
+            width: 80%;
+            position: relative;
+
+            @media screen and (min-width: $break-m) {
+                width: 90%;
+            }
+
+            @media screen and (min-width: $break-l) {
+                width: 92%;
+            }
+
+            .header_main_search_input {
+                background: #FFF;
+                height: 38px;
+                font-size: 14px;
+                color: $LightColor;
+                line-height: 1;
+                padding: 0;
+                border: 0;
+                border-radius: 3px;
+                width: 100%;
+                padding-left: 15px;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: $LightColor;
+                }
+
+                &::-moz-placeholder { /* Firefox 19+ */
+                    color: $LightColor;
+                }
+
+                &:-ms-input-placeholder { /* IE 10+ */
+                    color: $LightColor;
+                }
+                
+                &:-moz-placeholder { /* Firefox 18- */
+                    color: $LightColor;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                @media screen and (min-width: $break-m) {
+                    font-size: 18px;
+                }
+            }
+
+            .header_main_search_btn {
+                position: absolute;
+                width: 43px;
+                background-color: $ExtraLightColor;
+                display: block;
+                right: 0px;
+                top: 0px;
+                border: none;
+                height: 38px;
+                border-bottom-right-radius: 3px;
+                border-top-right-radius: 3px;
+                cursor: pointer;
+
+                .ion-android-search:before {
+                    display: block;
+                    position: absolute;
+                    font-size: 21px;
+                    color: $Color;
+                    right: 13px;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

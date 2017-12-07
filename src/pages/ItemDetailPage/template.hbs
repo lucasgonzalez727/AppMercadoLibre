@@ -1,0 +1,36 @@
+<div class="items_breadcrumb">
+    <ul>
+        {{#each categories}}
+            <li>{{this.name}}</li>
+        {{/each}}
+    </ul>
+</div>
+
+{{#unless title}} 
+    <div class="icon ion-loading-c"></div>
+{{/unless}}
+
+{{#if title}}
+
+<div class="itemDetail_container">
+    <div class="itemDetail">
+        <div class="itemDetail_picture">
+            <img src="{{picture}}" alt="{{title}}">
+        </div>
+        <div class="itemDetail_info">
+            <p class="itemDetail_info_condition">{{productCondition}} - {{sold_quantity}} vendidos</p>
+            <h2>{{title}}</h2>
+            <h3>{{priceFormatted}}</h3>
+            <button>Comprar</button>
+        </div>
+    </div>
+    {{#if description}}
+        <div class="itemDetail_description">
+            <h3>Descripción del producto</h3>
+            <p>{{description}}</p>
+        </div>
+    {{/if}}
+</div>
+{{/if}}
+
+

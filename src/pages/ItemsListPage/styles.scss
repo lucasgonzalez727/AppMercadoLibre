@@ -1,0 +1,64 @@
+/*pages/ItemsListPage/styles.css*/
+
+@import "variables.scss";
+
+.items {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @media screen and (min-width: $break-l) {
+        width: 980px;
+    }
+
+    .errorMessage {
+        font-size: 18px;
+        color: $LightColor;
+    }
+
+    .ion-loading-c {
+        position: absolute;
+        left: 50%;
+        top: 10px;
+
+        &:before {
+            font-size: 34px;
+        }
+    }
+
+    .items_list {
+        margin: 16px 0 32px;
+        padding: 0 16px;
+        background: #FFF;
+        border-radius: 4px;
+    }
+
+    .items_breadcrumb {
+        ul {
+            padding: 0px;
+            margin: 16px 0px;
+
+            li {
+                display: inline-block;
+                color: $LightColor;
+                font-size: 14px;
+
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 8px;
+                    margin-right: 3px;
+                }
+
+                &:last-child {
+                    font-weight: bold;
+                    
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
